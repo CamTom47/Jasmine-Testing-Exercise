@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById("calc-form");
   if (form) {
-    setupIntialValues();
+    setupInitialValues();
     form.addEventListener("submit", function(e) {
       e.preventDefault();
       update();
@@ -20,7 +20,7 @@ function getCurrentUIValues() {
 // Get the inputs from the DOM.
 // Put some default values in the inputs
 // Call a function to calculate the current monthly payment
-function setupIntialValues() {
+function setupInitialValues() {
   let values = {amount: 300000, years: 30, rate:7}
   let amountUI = document.getElementById("loan-amount");
   amountUI.value = values.amount

@@ -7,7 +7,6 @@ let allServers = {};
 let serverId = 0;
 
 serverForm.addEventListener('submit', submitServerInfo);
-
 // create server object and add to allServers, update html and reset input
 function submitServerInfo(evt) {
   if (evt) evt.preventDefault(); // when running tests there is no event
@@ -31,6 +30,7 @@ function updateServerTable() {
   for (let key in allServers) {
     let curServer = allServers[key];
 
+
     let newTr = document.createElement('tr');
     newTr.setAttribute('id', key);
 
@@ -38,7 +38,15 @@ function updateServerTable() {
 
     appendTd(newTr, curServer.serverName);
     appendTd(newTr, '$' + tipAverage.toFixed(2));
+    appendDeleteBtn(newTr)
+
 
     serverTbody.append(newTr);
   }
 }
+
+serverTbody.addEventListener('click',function(e){
+  if(e.target.innerText === 'X'){
+    e.target.parentElement.remove()
+  }
+})

@@ -11,7 +11,6 @@
 <body>
   <h1>Tip Pool</h1>
 
-  <section>
     <aside>
       <h4>Input payment info</h4>
       <form id="paymentForm">
@@ -68,7 +67,7 @@
           <th>Tip percent avg</th>
         </tr>
       </thead>
-      <tbody>
+      <>
         <tr>
           <td></td>
           <td></td>
@@ -84,12 +83,14 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine-html.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/boot.js"></script>
 
-<script src="servers.test.js"></script> 
+<script src="spec/servers.test.js"></script> 
+<script src="spec/payments.test.js"></script> 
+<script src="spec/helpers.test.js"></script> 
 
 <!-- end of Jasmine tests -->
 
-<script src="payments.js"></script> 
-<script src="servers.js"></script> 
-<script src="helpers.js"></script> 
+<script src="src/payments.js"></script> 
+<script src="src/servers.js"></script> 
+<script src="src/helpers.js"></script> 
 </body>
 </html>
